@@ -1,43 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="3" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="4" time="10.367">
-<testcase classname="To validate login application" name="To test login with valid creds" time="9.898">
-<system-out><![CDATA[Given Login Page............................................................passed
-]]></system-out>
-</testcase>
-<testcase classname="To validate login application" name="To test login with valid creds 2" time="0.013">
-<failure message="" type="java.lang.NullPointerException"><![CDATA[When Enter valid Name "Admin"...............................................failed
-And Enter valid password "admin123".........................................skipped
-And click submit............................................................skipped
-Then Login success - username "Welcome Paul"................................skipped
-
-StackTrace:
-java.lang.NullPointerException
-	at SetDefination.defination.enter_valid_name(defination.java:28)
-	at ✽.Enter valid Name "Admin"(file:///C:/Users/0013OO744/git/repository/com.ibm/src/test/resources/Login/login.feature:21)
-]]></failure>
-</testcase>
-<testcase classname="To validate login application" name="To test login with valid creds 3" time="0.011">
-<failure message="" type="java.lang.NullPointerException"><![CDATA[When Enter valid Name "Admin"...............................................failed
-And Enter valid password "admin123".........................................skipped
-And click submit............................................................skipped
-Then Login success - username "Welcome Paul"................................skipped
-
-StackTrace:
-java.lang.NullPointerException
-	at SetDefination.defination.enter_valid_name(defination.java:28)
-	at ✽.Enter valid Name "Admin"(file:///C:/Users/0013OO744/git/repository/com.ibm/src/test/resources/Login/login.feature:21)
-]]></failure>
-</testcase>
-<testcase classname="To validate login application" name="To test invlid credentials" time="0.004">
-<failure message="" type="java.lang.NullPointerException"><![CDATA[When Enter Invalid Name "Sagar".............................................failed
-And Enter invalid password "admin123".......................................skipped
-And click submit............................................................skipped
-Then I should see message as  "Invalid credentials".........................skipped
-
-StackTrace:
-java.lang.NullPointerException
-	at SetDefination.defination.enter_invalid_name(defination.java:55)
-	at ✽.Enter Invalid Name "Sagar"(file:///C:/Users/0013OO744/git/repository/com.ibm/src/test/resources/Login/login.feature:33)
+<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="0.839">
+<testcase classname="To validate login application" name="To test invlid credentials" time="0.084">
+<failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception"><![CDATA[Given Login Page details....................................................undefined
 ]]></failure>
 </testcase>
 </testsuite>

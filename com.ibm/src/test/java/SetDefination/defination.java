@@ -12,19 +12,19 @@ import junit.framework.Assert;
 
 public class defination {
 
-	//WebDriver dr = new ChromeDriver ();
+	
 	WebDriver dr;
 
 @Given("Login Page")
 public void login_page() throws InterruptedException {
   System.setProperty("webdriver.chrome.driver" , "C:\\Users\\0013OO744\\Downloads\\chromedriver_win32\\chromedriver.exe");
-		    WebDriver dr = new ChromeDriver ();
+		    dr = new ChromeDriver ();
 		   dr.get("https://opensource-demo.orangehrmlive.com/");
 		  }
 
 @When("Enter valid Name {string}")
 public void enter_valid_name(String name) {
-
+System.out.println("Inside valid name");
 dr.findElement(By.id("txtUsername")).sendKeys(name);
 
 }
@@ -64,8 +64,9 @@ public void enter_invalid_password(String pwd) {
 public void i_should_see_message_as(String expected) {
 	
 	String msg= dr.findElement(By.id("spanMessage")).getText();
-	Assert.assertEquals(expected, msg);}
-
+	Assert.assertEquals(expected, msg);
+dr.quit();	
+}
 
 
 

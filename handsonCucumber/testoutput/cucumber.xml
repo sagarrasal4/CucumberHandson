@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="2" time="15.248">
+<testcase classname="Register and validate" name="Sign in new user and verify username,email id post register" time="15.025">
+<system-out><![CDATA[Given Registration site is loaded...........................................passed
+When click on registration link.............................................passed
+And enter details in field  firstname as "Test" lastname as "Test"..........passed
+And e-mail "Test1@gmail.com"................................................passed
+And Username "Cucutest647656"...............................................passed
+And password as "abcd"......................................................passed
+And Confirm password "abcd".................................................passed
+And click on Register button................................................passed
+Then verify name after login with email id at profile "Dear Test Test,".....passed
+And check if same mailid is displayed at profile  "Test1@gmail.com".........passed
+]]></system-out>
+</testcase>
+<testcase classname="Register and validate" name="Send mail post registration" time="0.005">
+<failure message="" type="java.lang.NullPointerException"><![CDATA[Given user is registed and logged in........................................passed
+When user visits homepage...................................................failed
+And clicks on compose options...............................................skipped
+And fills details as send to "Sagar1rasal@gmail.com"........................skipped
+And Subject "Test mail".....................................................skipped
+And Message "Hi Mr Xyz," "This is test mail."  "From," "Test"...............skipped
+And user sends message......................................................skipped
+Then user shoud get acknowledgement message as "The message has been sent to email sagar1rasal@gmail.com".skipped
+
+StackTrace:
+java.lang.NullPointerException
+	at SetDefination.defination.user_visits_homepage(defination.java:116)
+	at ✽.user visits homepage(file:///C:/Users/0013OO744/Practice/handsonCucumber/src/test/resources/Login/login.feature:22)
+]]></failure>
+</testcase>
+</testsuite>
