@@ -9,6 +9,7 @@ import io.cucumber.junit.CucumberOptions;
 @CucumberOptions
 (features="src\\test\\resources\\Login\\login.feature",
 glue = {"SetDefination"},
+//tags= "@Test2",
 monochrome=true,
 dryRun = false,
 strict=true,

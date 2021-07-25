@@ -84,7 +84,7 @@ public class defination {
 		
 					   boolean result=	dr.findElement(By.xpath("//*[@id=\"cm-content\"]/div/div[2]/div/p[1]")).getText().contains(email + newLine + newLine +"Your personal settings have been registered.");
 						  System.out.println(result);
-			   System.out.println(email + newLine + newLine +"Your personal settings have been registered.");
+			//   System.out.println(email + newLine + newLine +"Your personal settings have been registered.");
 			  String expected = email + newLine + newLine +"Your personal settings have been registered.";
 			   // System.out.println(actual);
 			//System.out.println(expected);
@@ -112,8 +112,10 @@ public class defination {
 
 			
 			@When("user visits homepage")
-			public void user_visits_homepage() {
-				dr.findElement(By.xpath("//*[@id=\"navbar\"]/ul[1]/li[1]/a")).click();	
+			public void user_visits_homepage() { 
+		System.out.println(dr.findElement(By.xpath(" //*[@id=\"navbar\"]/ul[1]/li[1]/a")).isDisplayed());
+			//	dr.findElement(By.xpath(" //*[@id=\"navbar\"]/ul[1]/li[1]/a")).click();	
+				
 			}
 			@When("clicks on compose options")
 			public void clicks_on_compose_options() throws InterruptedException {
