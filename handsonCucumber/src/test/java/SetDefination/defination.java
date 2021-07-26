@@ -2,6 +2,7 @@ package SetDefination;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -65,17 +66,7 @@ public class defination {
 		}
 		   
 		
-		@Then("verify name after login with email id at profile")
-		public void verify_name_after_login_with_email_id_at_profile() {
-		 
-		  
-		}
-		@Then("check if same mailid is displayed at profile")
-		public void check_if_same_mailid_is_displayed_at_profile() {
-		    
-		}
-		
-		
+			
 		@Then("verify name after login with email id at profile {string}")
 		public void verify_name_after_login_with_email_id_at_profile(String email) {
 			String actual = dr.findElement(By.xpath("//*[@id=\"cm-content\"]/div/div[2]/div/p[1]")).getText();
@@ -97,14 +88,50 @@ public class defination {
 			
 						String actual = dr.findElement(By.xpath("//*[@id=\"navbar\"]/ul[2]/li[2]/ul/li[1]/div/p")).getText();
 						String expected = name;
-						System.out.println(actual);
-						Assert.assertEquals(expected, actual);
 						
+						Assert.assertEquals(expected, actual);
+						System.out.println("User registered successfully as"+ actual);
 		}
 
-//2nd scenario
-		
 
+			@When("user visits homepage to compose message")
+			public void user_visits_homepage_to_compose_message() throws InterruptedException {
+				dr.findElement(By.xpath(" //*[@id=\"navbar\"]/ul[1]/li[1]/a")).click();
+				Thread.sleep(3000);
+				dr.findElement(By.xpath("//*[@id=\"profileCollapse\"]/div/ul/li[2]/a")).click();
+				Thread.sleep(2000);
+			}
+
+		
+			@When("user enters details and sends mail to {string}")
+			public void user_enters_details_and_sends_mail_to(String receiver) throws InterruptedException {
+		
+				 dr.findElement(By.className("select2-search__field")).sendKeys(receiver);
+				 Thread.sleep(2000);
+				 dr.findElement(By.className("select2-search__field")).sendKeys(Keys.ENTER);
+				 
+				 dr.findElement(By.id("compose_message_title")).sendKeys("Test mail");
+				 
+				 String newline = System.getProperty("line.separator");
+				 dr.findElement(By.xpath("/html/body")).sendKeys( "Hi XYZ" + newline +"This is test mail" + newline + "From,"+ newline + "Test")	;
+				 
+				 dr.findElement(By.id("compose_message_compose")).click();
+				 
+				
+			}
+			@Then("user shoud get acknowledgement message as  {string}")
+			public void user_shoud_get_acknowledgement_message_as(String expected) throws InterruptedException {
+				
+				String actual =dr.findElement(By.xpath("//*[@id=\"cm-content\"]/div/div[2]/div/div[1]")).getText();
+				//String actual =dr.findElement(By.className("alert alert-success")).getText();
+				Assert.assertEquals(actual, expected);
+			//System.out.print(actual);
+			}
+
+
+		
+//2nd scenario
+	/*
 			@Given("user is registed and logged in")
 			public void user_is_registed_and_logged_in() {
 				 
@@ -130,13 +157,17 @@ public class defination {
 			public void subject(String sub) {
 			   dr.findElement(By.id("compose_message_title")).sendKeys("sub");
 			}
+			*/
+			
 			/*@When("Message {string}")
 			public void message(String start) {
 				String newline = System.getProperty("line.separator");
 	dr.findElement(By.xpath("/html/body")).sendKeys( start + newline +"This is test" + newline + "From,"+ newline + "Test")	;	    
 			}*/
 			
-			@When("Message {string} {string}  {string} {string}")
+		/*	
+		@When("Message {string} {string}  {string} {string}")
+		
 			public void message(String a, String b, String c, String d) {
 				String newline = System.getProperty("line.separator");
 				dr.findElement(By.xpath("/html/body")).sendKeys( a + newline +b + newline + c+ newline + d)	;	       
@@ -157,7 +188,7 @@ public class defination {
 				
 			}
 
-
+*/
 
 	
 

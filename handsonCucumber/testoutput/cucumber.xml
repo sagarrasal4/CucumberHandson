@@ -1,32 +1,42 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="2" time="26.037">
-<testcase classname="Register and validate" name="Sign in new user and verify username,email id post register" time="25.315">
-<system-out><![CDATA[Given Registration site is loaded...........................................passed
+<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="33.263">
+<testcase classname="Register and validate" name="Sign in new user and verify username,email id post register" time="32.968">
+<failure message="element click intercepted: Element &lt;button class=&quot; btn btn-primary &quot; name=&quot;compose&quot; type=&quot;submit&quot; id=&quot;compose_message_compose&quot;&gt;...&lt;/button&gt; is not clickable at point (568, 426). Other element would receive the click: &lt;iframe frameborder=&quot;0&quot; height=&quot;200&quot; width=&quot;100%&quot; scrolling=&quot;no&quot; src=&quot;http://elearningm1.upskills.in/main/messages/record_audio.php&quot;&gt;&lt;/iframe&gt;&#10;  (Session info: chrome=91.0.4472.124)&#10;Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'&#10;System info: host: 'LAPTOP-SBNJ9655', ip: '192.168.43.236', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_291'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 91.0.4472.124, chrome: {chromedriverVersion: 91.0.4472.101 (af52a90bf870..., userDataDir: C:\Users\0013OO~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:55462}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Session ID: b715340f8d9e40c9144311b9c2672755" type="org.openqa.selenium.ElementClickInterceptedException"><![CDATA[Given Registration site is loaded...........................................passed
 When click on registration link.............................................passed
 And enter details in field  firstname as "Test" lastname as "Test"..........passed
 And e-mail "Test1@gmail.com"................................................passed
-And Username "Cucutest906766"...............................................passed
+And Username "Cucutest9474d6"...............................................passed
 And password as "abcd"......................................................passed
 And Confirm password "abcd".................................................passed
 And click on Register button................................................passed
-Then verify name after login with email id at profile "Dear Test Test,".....passed
+And verify name after login with email id at profile "Dear Test Test,"......passed
 And check if same mailid is displayed at profile  "Test1@gmail.com".........passed
-]]></system-out>
-</testcase>
-<testcase classname="Register and validate" name="Send mail post registration" time="0.031">
-<failure message="" type="java.lang.NullPointerException"><![CDATA[Given user is registed and logged in........................................passed
-When user visits homepage...................................................failed
-And clicks on compose options...............................................skipped
-And fills details as send to "Sagar1rasal@gmail.com"........................skipped
-And Subject "Test mail".....................................................skipped
-And Message "Hi Mr Xyz," "This is test mail."  "From," "Test"...............skipped
-And user sends message......................................................skipped
-Then user shoud get acknowledgement message as "The message has been sent to email sagar1rasal@gmail.com".skipped
+And user visits homepage to compose message.................................passed
+And user enters details and sends mail to "naveen"..........................failed
+Then user shoud get acknowledgement message as  "The message has been sent to naveen naveen (naveen)".skipped
 
 StackTrace:
-java.lang.NullPointerException
-	at SetDefination.defination.user_visits_homepage(defination.java:116)
-	at ✽.user visits homepage(file:///C:/Users/0013OO744/git/repository/handsonCucumber/src/test/resources/Login/login.feature:22)
+org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <button class=" btn btn-primary " name="compose" type="submit" id="compose_message_compose">...</button> is not clickable at point (568, 426). Other element would receive the click: <iframe frameborder="0" height="200" width="100%" scrolling="no" src="http://elearningm1.upskills.in/main/messages/record_audio.php"></iframe>
+  (Session info: chrome=91.0.4472.124)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LAPTOP-SBNJ9655', ip: '192.168.43.236', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_291'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 91.0.4472.124, chrome: {chromedriverVersion: 91.0.4472.101 (af52a90bf870..., userDataDir: C:\Users\0013OO~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:55462}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: b715340f8d9e40c9144311b9c2672755
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at SetDefination.defination.user_enters_details_and_sends_mail_to(defination.java:118)
+	at ✽.user enters details and sends mail to "naveen"(file:///C:/Users/0013OO744/git/repository/handsonCucumber/src/test/resources/Login/login.feature:18)
 ]]></failure>
 </testcase>
 </testsuite>
