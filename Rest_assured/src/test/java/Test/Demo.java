@@ -14,9 +14,8 @@ public class Demo {
 	// base url is static
 	public static String baseurl ="https://api.trello.com";
 	
-	
-		@Test
-		public void test1() {
+	@Test
+				public void test1() {
 		
 		//in rest assured
 		RestAssured.baseURI=baseurl;
@@ -36,7 +35,7 @@ public class Demo {
 		System.out.println("Executed successfully");
 		}
 		
-		@Test
+	@Test
 		public void Test2()
 		
 		{
@@ -60,7 +59,7 @@ public class Demo {
 			
 		}
 		
-		@Test
+	@Test
 		public void Test3()
 		
 		{
@@ -72,9 +71,9 @@ public class Demo {
 			//given is a precondition to take you to parameters  -- header, authorization
 			
 			given().
-			param("key","72d5d9dd268b7dd37f9fc7ab42f341b7").
-			param("token","a30f524a798c3c1b8a7980a132f6d815304c96b67b23e74370e021f6ef2beff0").
-			param("name",boardname).
+			queryParam("key","72d5d9dd268b7dd37f9fc7ab42f341b7").
+			queryParam("token","a30f524a798c3c1b8a7980a132f6d815304c96b67b23e74370e021f6ef2beff0").
+			queryParam("name",boardname).
 			queryParam("desc","using eclipse").
 			header("content-type","application/jason").
 			//when is used to give methood get,put,delete also body

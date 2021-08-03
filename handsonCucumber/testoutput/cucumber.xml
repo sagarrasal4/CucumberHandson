@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="33.263">
-<testcase classname="Register and validate" name="Sign in new user and verify username,email id post register" time="32.968">
-<failure message="element click intercepted: Element &lt;button class=&quot; btn btn-primary &quot; name=&quot;compose&quot; type=&quot;submit&quot; id=&quot;compose_message_compose&quot;&gt;...&lt;/button&gt; is not clickable at point (568, 426). Other element would receive the click: &lt;iframe frameborder=&quot;0&quot; height=&quot;200&quot; width=&quot;100%&quot; scrolling=&quot;no&quot; src=&quot;http://elearningm1.upskills.in/main/messages/record_audio.php&quot;&gt;&lt;/iframe&gt;&#10;  (Session info: chrome=91.0.4472.124)&#10;Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'&#10;System info: host: 'LAPTOP-SBNJ9655', ip: '192.168.43.236', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_291'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 91.0.4472.124, chrome: {chromedriverVersion: 91.0.4472.101 (af52a90bf870..., userDataDir: C:\Users\0013OO~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:55462}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Session ID: b715340f8d9e40c9144311b9c2672755" type="org.openqa.selenium.ElementClickInterceptedException"><![CDATA[Given Registration site is loaded...........................................passed
+<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="30.327">
+<testcase classname="Register and validate" name="Sign in new user and verify username,email id post register" time="30.153">
+<failure message="no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;.cke_editable\ cke_editable_themed\ cke_contents_ltr\ cke_show_borders&quot;}&#10;  (Session info: chrome=91.0.4472.124)&#10;For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html&#10;Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'&#10;System info: host: 'LAPTOP-SBNJ9655', ip: '192.168.43.236', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_291'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 91.0.4472.124, chrome: {chromedriverVersion: 91.0.4472.101 (af52a90bf870..., userDataDir: C:\Users\0013OO~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:62408}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Session ID: 5f768261cbdb07d9be1c1b2bb5b52e60&#10;*** Element info: {Using=class name, value=cke_editable cke_editable_themed cke_contents_ltr cke_show_borders}" type="org.openqa.selenium.NoSuchElementException"><![CDATA[Given Registration site is loaded...........................................passed
 When click on registration link.............................................passed
 And enter details in field  firstname as "Test" lastname as "Test"..........passed
 And e-mail "Test1@gmail.com"................................................passed
-And Username "Cucutest9474d6"...............................................passed
+And Username "Cucutest9d4d6"................................................passed
 And password as "abcd"......................................................passed
 And Confirm password "abcd".................................................passed
 And click on Register button................................................passed
@@ -16,13 +16,15 @@ And user enters details and sends mail to "naveen"..........................fail
 Then user shoud get acknowledgement message as  "The message has been sent to naveen naveen (naveen)".skipped
 
 StackTrace:
-org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <button class=" btn btn-primary " name="compose" type="submit" id="compose_message_compose">...</button> is not clickable at point (568, 426). Other element would receive the click: <iframe frameborder="0" height="200" width="100%" scrolling="no" src="http://elearningm1.upskills.in/main/messages/record_audio.php"></iframe>
+org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":".cke_editable\ cke_editable_themed\ cke_contents_ltr\ cke_show_borders"}
   (Session info: chrome=91.0.4472.124)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'LAPTOP-SBNJ9655', ip: '192.168.43.236', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_291'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 91.0.4472.124, chrome: {chromedriverVersion: 91.0.4472.101 (af52a90bf870..., userDataDir: C:\Users\0013OO~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:55462}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: b715340f8d9e40c9144311b9c2672755
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 91.0.4472.124, chrome: {chromedriverVersion: 91.0.4472.101 (af52a90bf870..., userDataDir: C:\Users\0013OO~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:62408}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 5f768261cbdb07d9be1c1b2bb5b52e60
+*** Element info: {Using=class name, value=cke_editable cke_editable_themed cke_contents_ltr cke_show_borders}
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -33,8 +35,10 @@ Session ID: b715340f8d9e40c9144311b9c2672755
 	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByClassName(RemoteWebDriver.java:412)
+	at org.openqa.selenium.By$ByClassName.findElement(By.java:389)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
 	at SetDefination.defination.user_enters_details_and_sends_mail_to(defination.java:118)
 	at ✽.user enters details and sends mail to "naveen"(file:///C:/Users/0013OO744/git/repository/handsonCucumber/src/test/resources/Login/login.feature:18)
 ]]></failure>

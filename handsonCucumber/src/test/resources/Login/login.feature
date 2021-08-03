@@ -8,7 +8,7 @@ Given Registration site is loaded.
 When click on registration link
 And enter details in field  firstname as "Test" lastname as "Test"
 And e-mail "Test1@gmail.com" 
-And Username "Cucutest9474d6"
+And Username "Cucutest9d4d6"
 And password as "abcd"
 And Confirm password "abcd" 
 And click on Register button

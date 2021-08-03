@@ -115,6 +115,8 @@ public class defination {
 				 String newline = System.getProperty("line.separator");
 				 dr.findElement(By.xpath("/html/body")).sendKeys( "Hi XYZ" + newline +"This is test mail" + newline + "From,"+ newline + "Test")	;
 				 
+				 dr.findElement(By.className("cke_editable cke_editable_themed cke_contents_ltr cke_show_borders")).sendKeys( "Hi XYZ" + newline +"This is test mail" + newline + "From,"+ newline + "Test")	;
+				 
 				 dr.findElement(By.id("compose_message_compose")).click();
 				 
 				
